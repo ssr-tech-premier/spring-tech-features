@@ -67,14 +67,14 @@ address-service | http://localhost:9200/customerAddress
 
 4. customer-service successfully started
 	- Access http://localhost:9100/greeting
-	![customer-service-greeting](https://user-images.githubusercontent.com/33663711/34145249-26dc68d8-e4bb-11e7-80e8-8e122e08857e.PNG)
+![customer-service-greeting](https://user-images.githubusercontent.com/33663711/34145249-26dc68d8-e4bb-11e7-80e8-8e122e08857e.PNG)
 	
 	- Access http://localhost:9100/config/prop?propName=default.customer.names 
 	![customer-service-propname-value](https://user-images.githubusercontent.com/33663711/34145250-274e3c4c-e4bb-11e7-982f-ebe37353405a.PNG)
 
 5. address-service successfully started
 	- Access http://localhost:9200/greeting
-	![address-service-greeting](https://user-images.githubusercontent.com/33663711/34145255-284316e0-e4bb-11e7-9173-eee7f80351e5.PNG)
+![address-service-greeting](https://user-images.githubusercontent.com/33663711/34145255-284316e0-e4bb-11e7-9173-eee7f80351e5.PNG)
 	
 	- Access http://localhost:9200/customerAddress 
 	![address-service-customer-address](https://user-images.githubusercontent.com/33663711/34145254-280332b4-e4bb-11e7-9f4e-b0cc57b1566c.PNG)
