@@ -1,6 +1,6 @@
 ## spring-tech-features
 
-Demo application are developed using Spring Boot.
+Demo application are developed using **Spring Boot**.
 
 ## Demo Application
 
@@ -46,33 +46,33 @@ address-service | http://localhost:9200/customerAddress
 	- D:/spring-tech-features/customer-service> spring-boot:run -Dspring.profiles.active=dev
 	- D:/spring-tech-features/address-service> spring-boot:run
 
-5. Access the Test URLs listed above 
+5. Access the **Test URLs** listed above 
 
 ## Snapshots of Demo Applications
 
-1. spring-service-registry successfully started http://localhost:8761/
+1. **spring-service-registry** successfully started http://localhost:8761/
 	- Initial page of spring-service-registry
 	![service-registry-initial-startup](https://user-images.githubusercontent.com/33663711/34145253-27c4f5f8-e4bb-11e7-9601-e18ba38d851c.PNG)
 
-2. spring-config-server successfully started
+2. **spring-config-server** successfully started
 	- Accessing customer-service dev properties http://localhost:8888/customer-service/dev
 	![config-server-customer-service-dev](https://user-images.githubusercontent.com/33663711/34145258-28fce778-e4bb-11e7-93eb-fa6bebf302df.PNG)
 		
 	- Accessing address-service default properties
 	![config-server-address-service-default](https://user-images.githubusercontent.com/33663711/34145257-28c28c68-e4bb-11e7-9884-5b0b5ed9508b.PNG)
 	
-3. spring-service-registry  clients successfully restistered http://localhost:8761/
+3. **spring-service-registry**  clients successfully restistered http://localhost:8761/
 	- After customer-service & address-service restistered
 	![service-registry-after-client-registrations](https://user-images.githubusercontent.com/33663711/34145251-278926e0-e4bb-11e7-9cca-c80a937a6e2f.PNG)
 
-4. customer-service successfully started
+4. **customer-service** successfully started
 	- Access http://localhost:9100/greeting
 	![customer-service-greeting](https://user-images.githubusercontent.com/33663711/34146042-7e19d7ea-e4be-11e7-9dc2-ca42c7ff18c5.PNG)
 	
 	- Access http://localhost:9100/config/prop?propName=default.customer.names 
 	![customer-service-propname-value](https://user-images.githubusercontent.com/33663711/34145250-274e3c4c-e4bb-11e7-982f-ebe37353405a.PNG)
 
-5. address-service successfully started
+5. **address-service** successfully started
 	- Access http://localhost:9200/greeting
 	![address-service-greeting](https://user-images.githubusercontent.com/33663711/34146043-7e808cd8-e4be-11e7-9c05-829ae13e226e.PNG)
 	
