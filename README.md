@@ -12,6 +12,7 @@ Service Registration | spring-service-registry
 Centralized Configuration | spring-config-server
 Service Discovery | customer-service
 Service Discovery | address-service
+Routing and Filtering | spring-zuul
 
 
 ## Demo Application - Test URLs
@@ -25,6 +26,10 @@ customer-service | http://localhost:9100/greeting
 customer-service | http://localhost:9100/config/prop?propName=default.customer.names
 address-service | http://localhost:9200/greeting
 address-service | http://localhost:9200/customerAddress
+spring-zuul	| http://localhost:9300/customer/greeting
+spring-zuul	| http://localhost:9300/customer/config/prop?propName=default.customer.names
+spring-zuul	| http://localhost:9300/address/greeting
+spring-zuul	| http://localhost:9300/address/customerAddress
 
 ## Build and Run the Demo Application 
 
@@ -39,12 +44,14 @@ address-service | http://localhost:9200/customerAddress
 	- D:/spring-tech-features/spring-config-server> mvn clean install
 	- D:/spring-tech-features/customer-service> mvn clean install
 	- D:/spring-tech-features/address-service> mvn clean install
+	- D:/spring-tech-features/spring-zuul> mvn clean install
 	
 4. Run the application in the same order listed below. Since all the applications are developed using spring boot, it has embedded tomcat to run the applications.
 	- D:/spring-tech-features/spring-service-registry> spring-boot:run
 	- D:/spring-tech-features/spring-config-server> spring-boot:run
 	- D:/spring-tech-features/customer-service> spring-boot:run -Dspring.profiles.active=dev
 	- D:/spring-tech-features/address-service> spring-boot:run
+	- D:/spring-tech-features/spring-zuul> spring-boot:run
 
 5. Access the **Test URLs** listed above 
 
@@ -68,14 +75,23 @@ address-service | http://localhost:9200/customerAddress
 4. **customer-service** successfully started
 	- Access http://localhost:9100/greeting
 	![customer-service-greeting](https://user-images.githubusercontent.com/33663711/34146042-7e19d7ea-e4be-11e7-9dc2-ca42c7ff18c5.PNG)
-	
 	- Access http://localhost:9100/config/prop?propName=default.customer.names 
 	![customer-service-propname-value](https://user-images.githubusercontent.com/33663711/34145250-274e3c4c-e4bb-11e7-982f-ebe37353405a.PNG)
 
 5. **address-service** successfully started
 	- Access http://localhost:9200/greeting
 	![address-service-greeting](https://user-images.githubusercontent.com/33663711/34146043-7e808cd8-e4be-11e7-9c05-829ae13e226e.PNG)
-	
 	- Access http://localhost:9200/customerAddress 
 	![address-service-customer-address](https://user-images.githubusercontent.com/33663711/34145254-280332b4-e4bb-11e7-9f4e-b0cc57b1566c.PNG)
 	
+6. **spring-zuul** successfully started
+	- Access Customer greeting http://localhost:9300/customer/greeting
+	![spring-zuul-customer-greeting](https://user-images.githubusercontent.com/33663711/34156033-810816b0-e4e1-11e7-9190-3546ded2ff31.PNG)
+	- Access Customer names  http://localhost:9300/customer/config/prop?propName=default.customer.names
+	![spring-zuul-customer-names](https://user-images.githubusercontent.com/33663711/34156035-814a6e48-e4e1-11e7-9d86-363bec07e92c.PNG)
+	- Access Address greeting  http://localhost:9300/address/greeting
+	![spring-zuul-address-greeting](https://user-images.githubusercontent.com/33663711/34156032-80c93300-e4e1-11e7-8a94-649a2da19d5e.PNG)
+	- Access Address of Customer http://localhost:9300/address/customerAddress
+	![spring-zuul-address-customer](https://user-images.githubusercontent.com/33663711/34156031-808af43c-e4e1-11e7-8ad4-6af688d351dc.PNG)
+	
+
