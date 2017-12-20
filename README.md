@@ -70,7 +70,7 @@ spring-zuul	| http://localhost:9300/address/customerAddress
 	
 3. **spring-service-registry**  clients successfully restistered http://localhost:8761/
 	- After customer-service & address-service restistered
-	![service-registry-after-client-registrations](https://user-images.githubusercontent.com/33663711/34145251-278926e0-e4bb-11e7-9cca-c80a937a6e2f.PNG)
+	![service-registry-after-client-registrations](https://user-images.githubusercontent.com/33663711/34184854-213f9a98-e548-11e7-9672-8194adb5cb86.PNG)
 
 4. **customer-service** successfully started
 	- Access http://localhost:9100/greeting
